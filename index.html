@@ -15,77 +15,124 @@
 
 <body>
     <header class="header">
-        <img src="./img/logo.svg" alt="логотип кофейни" class="header__logo">
-        <nav class="header__nav">
-            <a href="#about" class="header__link">О нас</a>
-            <a href="#menu" class="header__link">Меню</a>
-            <a href="#reviews" class="header__link">Отзывы</a>
-            <a href="#find-us" class="header__link">Контакты</a>
-        </nav>
-        <button class="header__button button">Связаться</button>
+        <div class="header-content center">
+            <a class="header__logo" href="#"><img src="./img/logo.svg" alt="логотип кофейни"></a>
+
+            <div class="header-info">
+                <nav class="header__nav">
+                    <a href="#about" class="header__link">О нас</a>
+                    <a href="#menu" class="header__link">Меню</a>
+                    <a href="#reviews" class="header__link">Отзывы</a>
+                    <a href="#find-us" class="header__link">Контакты</a>
+                </nav>
+
+                <button class="header__button button">Связаться</button>
+            </div>
+        </div>
     </header>
 
     <section class="top">
         <div class="top-content center">
-            <h1 class="top__title">Добро пожаловать <br>в «Зернышко»</h1>
-            <h2 class="top__subtitle">Ароматный кофе и уютная атмосфера каждый день</h2>
-            <p class="top__text">Мы готовим кофе с душой и верим, что каждая чашка — это маленькое наслаждение,
-                созданное
-                для вас.
-                Мы предлагаем свежие зерна, уникальные авторские рецепты и заботу о природе. Наши бариста рады подарить
-                вам
-                вкус и уют, из-за которых захочется возвращаться снова и снова.</p>
+            <h1 class="top__title h1">Добро пожаловать <br>в «Зернышко»</h1>
+            <h2 class="top__subtitle h2">Ароматный кофе и уютная <br>атмосфера каждый день</h2>
+
+            <div class="paragraph">
+                <p class="top__text">Мы готовим кофе с душой и верим, что каждая чашка — <br>это маленькое наслаждение,
+                    созданное
+                    для вас.</p>
+                <p class="top__text">
+                    Мы предлагаем свежие зерна, уникальные авторские <br>рецепты и заботу о природе. Наши бариста рады
+                    <br>подарить вам вкус и уют, из-за которых захочется <br>возвращаться снова и снова.
+                </p>
+            </div>
 
             <a href="#menu" class="top__button button">Посмотреть меню</a>
         </div>
 
-        <img src="./img/top-table.png" alt="стол" class="top__image top__image-table">
-        <img src="./img/top-grains.png" alt="зерна" class="top__image top__image-grains">
-        <img src="./img/top-coffee.png" alt="кофе" class="top__image top__image-coffee">
-        <img src="./img/top-cookie.png" alt="печенье" class="top__image top__image-cookie">
-        <img src="./img/top-cinnamon.png" alt="синнамон" class="top__image top__image-cinnamon">
+        <img src="./img/top-table.png" alt="стол" class="top__image top__image_table">
+        <img src="./img/top-grains.png" alt="зерна" class="top__image top__image_grains">
+        <img src="./img/top-coffee.svg" alt="кофе" class="top__image top__image_coffee">
+        <img src="./img/top-cookie.png" alt="печенье" class="top__image top__image_cookie">
+        <img src="./img/top-cinnamon.png" alt="синнамон" class="top__image top__image_cinnamon">
     </section>
 
     <section class="about center" id="about">
-        <h1 class="about__title">О нас</h1>
+        <h1 class="title h1">О нас</h1>
 
-        <div class="history">
-            <img src="./img/history.jpg" alt="фон кафе" class="about__img">
-            <h2 class="about__title">История</h2>
-            <p class="about__text">«Зернышко» — кофейня, которая родилась из любви к хорошему кофе и желания создать
-                место уюта для каждого.
-                Открытая в 2020 году, кофейня быстро стала любимой как для ценителей кофе, так и для тех, кто просто
-                ищет спокойное место для отдыха.</p>
-        </div>
+        <div class="about-content">
+            <div class="about__item">
+                <img src="./img/history.jpg" alt="фон кафе" class="about__img">
 
-        <div class="philosophy">
-            <img src="./img/philosophy.jpg" alt="чашка кофе" class="about__img">
-            <h2 class="about__title">Философия</h2>
-            <p class="about__text">Мы верим, что каждая чашка кофе — это особый момент.
-                Стремимся создать теплую дружелюбную атмосферу, где каждый гость чувствует себя как дома.
-                Наши бариста с заботой подходят к каждому заказу, создавая напитки с любовью и вниманием к деталям.</p>
-        </div>
+                <div class="about__text-box">
+                    <h2 class="about__subtitle h2">История</h2>
 
-        <div class="fresh-grain">
-            <img src="./img/fresh-grain.jpg" alt="кофейное зерно" class="about__img">
-            <h2 class="about__title">Свежее зерно</h2>
-            <p class="about__text">Мы используем только свежие зерна и экспериментируем с оригинальными рецептами, чтобы
-                радовать гостей уникальными вкусами.
-                Наша команда сотрудничает с локальными обжарщиками, поддерживая высокое качество и разнообразие.</p>
-        </div>
+                    <p class="about__text text">«Зернышко» — кофейня, которая родилась из любви к хорошему кофе и
+                        желания
+                        создать
+                        место уюта для каждого.</p>
+                    <p class="about__text text">Открытая в 2020 году, кофейня быстро стала любимой как для ценителей
+                        кофе,
+                        так и
+                        для
+                        тех, кто просто
+                        ищет спокойное место для отдыха.</p>
+                </div>
+            </div>
 
-        <div class="caring-nature">
-            <img src="./img/care-nature.jpg" alt="стаканчик кофе" class="about__img">
-            <h2 class="about__title">Забота о природе</h2>
-            <p class="about__text">Мы стараемся уменьшить экологический след, используя биоразлагаемые стаканчики и
-                предлагая скидки для тех, кто приходит со своей чашкой.
-                Мы заботимся не только о клиентах, но и о планете.</p>
+            <div class="about__item">
+                <img src="./img/philosophy.jpg" alt="чашка кофе" class="about__img">
+
+                <div class="about__text-box">
+                    <h2 class="about__subtitle h2">Философия</h2>
+
+                    <p class="about__text text">Мы верим, что каждая чашка кофе — это особый момент.</p>
+                    <p class="about__text text">Стремимся создать теплую дружелюбную атмосферу, где каждый гость
+                        чувствует
+                        себя
+                        как
+                        дома.</p>
+                    <p class="about__text text">Наши бариста с заботой подходят к каждому заказу, создавая напитки с
+                        любовью
+                        и
+                        вниманием к деталям.</p>
+                </div>
+            </div>
+
+            <div class="about__item">
+                <img src="./img/fresh-grain.jpg" alt="кофейное зерно" class="about__img">
+
+                <div class="about__text-box">
+                    <h2 class="about__subtitle h2">Свежее зерно</h2>
+
+                    <p class="about__text text">Мы используем только свежие зерна и экспериментируем с оригинальными
+                        рецептами,
+                        чтобы
+                        радовать гостей уникальными вкусами.</p>
+                    <p class="about__text text">Наша команда сотрудничает с локальными обжарщиками, поддерживая высокое
+                        качество
+                        и
+                        разнообразие.</p>
+                </div>
+            </div>
+
+            <div class="about__item">
+                <img src="./img/care-nature.jpg" alt="стаканчик кофе" class="about__img">
+
+                <div class="about__text-box">
+                    <h2 class="about__subtitle h2">Забота о природе</h2>
+
+                    <p class="about__text text">Мы стараемся уменьшить экологический след, используя биоразлагаемые
+                        стаканчики и
+                        предлагая скидки для тех, кто приходит со своей чашкой.</p>
+                    <p class="about__text text">Мы заботимся не только о клиентах, но и о планете.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="menu center" id="menu">
         <header class="menu-header">
-            <h1 class="menu__title">Меню</h1>
+            <h1 class="title h1">Меню</h1>
 
             <div class="category">
                 <button class="menu__button">Кофе</button>
@@ -273,7 +320,7 @@
         <div class="review">
             <header class="review-info">
                 <img src="" alt="" class="review__img">
-                <h2 class="review__client-name">Ирина</h2>
+                <h2 class="review__client-name h2">Ирина</h2>
                 <div class="rating">
                     <img src="" alt="звездочка рейтинга" class="review__rate-point">
                     <img src="" alt="звездочка рейтинга" class="review__rate-point">
@@ -289,12 +336,12 @@
     </section>
 
     <section class="find-us center" id="find-us">
-        <h2 class="find-us__title">Как нас найти</h2>
+        <h1 class="title h1">Как нас найти</h1>
 
         <div class="contacts-box">
             <div class="contacts-info">
                 <div class="contacts">
-                    <h2 class="contacts__title">Контакты</h2>
+                    <h2 class="contacts__title h2">Контакты</h2>
 
                     <div class="contacts-item">
                         <img src="" alt="иконка телефона" class="contacts__img">
@@ -313,7 +360,7 @@
                 </div>
 
                 <form action="" method="get" class="booking">
-                    <h2 class="booking__title">Бронирование</h2>
+                    <h2 class="booking__title h2">Бронирование</h2>
 
                     <div class="booking-info">
                         <input class="booking__input" type="text" name="booking" id="client-name"
@@ -330,21 +377,23 @@
             </div>
         </div>
 
-        <div class="find-us__map" style="position:relative;overflow:hidden;">
-            <a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps"
-                style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a>
-            <a href="https://yandex.ru/maps/2/saint-petersburg/house/pionerskaya_ulitsa_27a/Z0kYdA9pTEMCQFtjfXV0eX5iYQ==/?ll=30.348969%2C59.955890&utm_medium=mapframe&utm_source=maps&z=12.44"
-                style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс Карты</a>
-            <iframe
-                src="https://yandex.ru/map-widget/v1/?ll=30.348969%2C59.955890&mode=whatshere&whatshere%5Bpoint%5D=30.289321%2C59.958238&whatshere%5Bzoom%5D=17&z=12.44"
-                width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+        <div class="find-us__map">
+            <!-- <div style="position:relative;overflow:hidden;"><a
+                    href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps"
+                    style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a
+                    href="https://yandex.ru/maps/2/saint-petersburg/house/pionerskaya_ulitsa_27a/Z0kYdA9pTEMCQFtjfXV0eX5iYQ==/?ll=30.348969%2C59.955890&utm_medium=mapframe&utm_source=maps&z=12"
+                    style="color:#eee;font-size:12px;position:absolute;top:14px;">Пионерская улица, 27А на карте
+                    Санкт‑Петербурга, ближайшее метро Чкаловская — Яндекс Карты</a><iframe
+                    src="https://yandex.ru/map-widget/v1/?ll=30.348969%2C59.955890&mode=whatshere&utm_source=share&whatshere%5Bpoint%5D=30.289565%2C59.958215&whatshere%5Bzoom%5D=17&z=12"
+                    width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+            </div> -->
         </div>
     </section>
 
     <footer class="footer">
         <div class="footer-content center">
             <div class="footer-info">
-                <img src="" alt="логотип кофейни" class="footer__logo">
+                <a class="footer__logo" href="#"><img src="./img/logo.svg" alt="логотип кофейни"></a>
                 <p class="footer__rights">© 2025 Все права защищены</p>
             </div>
 
