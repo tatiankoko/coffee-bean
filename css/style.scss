@@ -442,10 +442,6 @@ a {
         height: 100%;
         width: 63px;
     }
-
-    &__client-name {
-        //flex-grow: 1;
-    }
 }
 
 .review-info {
@@ -470,8 +466,8 @@ a {
 
     &__map {
         position: relative;
-        min-width: 379px;
-        min-height: 379px;
+        // min-width: 379px;
+        // min-height: 379px;
 
         flex-basis: 379px;
         flex-grow: 1;
@@ -619,3 +615,6 @@ a {
     align-items: flex-end;
     justify-content: flex-end;
 }
+
+@import 'tablet';
+@import 'mobile';
