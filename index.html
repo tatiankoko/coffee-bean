@@ -61,7 +61,9 @@
 
         <div class="about-content">
             <div class="about__item">
-                <img src="./img/history.jpg" alt="фон кафе" class="about__img">
+                <div class="about__img-box">
+                    <img src="./img/history.jpg" alt="фон кафе" class="about__img">
+                </div>
 
                 <div class="about__text-box">
                     <h2 class="about__subtitle h2">История</h2>
@@ -80,7 +82,9 @@
             </div>
 
             <div class="about__item">
-                <img src="./img/philosophy.jpg" alt="чашка кофе" class="about__img">
+                <div class="about__img-box">
+                    <img src="./img/philosophy.jpg" alt="чашка кофе" class="about__img">
+                </div>
 
                 <div class="about__text-box">
                     <h2 class="about__subtitle h2">Философия</h2>
@@ -99,7 +103,9 @@
             </div>
 
             <div class="about__item">
-                <img src="./img/fresh-grain.jpg" alt="кофейное зерно" class="about__img">
+                <div class="about__img-box">
+                    <img src="./img/fresh-grain.jpg" alt="кофейное зерно" class="about__img">
+                </div>
 
                 <div class="about__text-box">
                     <h2 class="about__subtitle h2">Свежее зерно</h2>
@@ -116,7 +122,9 @@
             </div>
 
             <div class="about__item">
-                <img src="./img/care-nature.jpg" alt="стаканчик кофе" class="about__img">
+                <div class="about__img-box">
+                    <img src="./img/care-nature.jpg" alt="стаканчик кофе" class="about__img">
+                </div>
 
                 <div class="about__text-box">
                     <h2 class="about__subtitle h2">Забота о природе</h2>
@@ -131,187 +139,258 @@
     </section>
 
     <section class="menu center" id="menu">
-        <header class="menu-header">
-            <h1 class="title h1">Меню</h1>
+        <header class="menu-header title">
+            <h1 class="h1">Меню</h1>
 
-            <div class="category">
-                <button class="menu__button">Кофе</button>
-                <button class="menu__button">Десерты</button>
-                <button class="menu__button">Закуски</button>
+            <div class="menu-category">
+                <button class="menu__button button">Кофе</button>
+                <button class="menu__button button">Десерты</button>
+                <button class="menu__button button">Закуски</button>
             </div>
         </header>
 
         <div class="product-box" id="coffee">
             <div class="product">
-                <img src="./img/product-1.png" alt="чашка кофе" class="product__img">
-                <p class="product__price">240₽</p>
-                <p class="product__description">Капучино на миндальном молоке с кокосовым сиропом</p>
-                <p class="product__weight product__weight_ml">350</p>
+                <img src="./img/product-1.svg" alt="чашка кофе" class="product__img">
+
+                <div class="product-info">
+                    <h2 class="product__price h2">240</h2>
+                    <p class="product__description">Капучино на миндальном молоке с кокосовым сиропом</p>
+                    <p class="product__weight product__weight_ml">350</p>
+                </div>
             </div>
 
             <div class="product">
-                <img src="./img/product-2.png" alt="чашка кофе" class="product__img">
-                <p class="product__price">270</p>
-                <p class="product__description">Латте на кокосовом молокес кленовым сиропом </p>
-                <p class="product__weight product__weight_ml">350</p>
+                <img src="./img/product-2.svg" alt="чашка кофе" class="product__img">
+
+                <div class="product-info">
+                    <h2 class="product__price h2">270</h2>
+                    <p class="product__description">Латте на кокосовом молоке с кленовым сиропом</p>
+                    <p class="product__weight product__weight_ml">350</p>
+                </div>
             </div>
 
             <div class="product">
-                <img src="./img/product-3.png" alt="чашка кофе" class="product__img">
-                <p class="product__price">360</p>
-                <p class="product__description">Раф с карамельным сиропоми шоколадом</p>
-                <p class="product__weight product__weight_ml">250</p>
+                <img src="./img/product-3.svg" alt="чашка кофе" class="product__img">
+
+                <div class="product-info">
+                    <h2 class="product__price h2">360</h2>
+                    <p class="product__description">Раф с карамельным сиропоми шоколадом</p>
+                    <p class="product__weight product__weight_ml">250</p>
+                </div>
             </div>
 
             <div class="product">
-                <img src="./img/product-4.png" alt="чашка кофе" class="product__img">
-                <p class="product__price">160</p>
-                <p class="product__description">Классический американо с зарядом бодрости</p>
-                <p class="product__weight product__weight_ml">300</p>
+                <img src="./img/product-4.svg" alt="чашка кофе" class="product__img">
+
+                <div class="product-info">
+                    <h2 class="product__price h2">160</h2>
+                    <p class="product__description">Классический американо с зарядом бодрости</p>
+                    <p class="product__weight product__weight_ml">300</p>
+                </div>
             </div>
 
             <div class="product">
-                <img src="./img/product-5.png" alt="чашка кофе" class="product__img">
-                <p class="product__price">160</p>
-                <p class="product__description">Флет уайт с насыщенным вкусом эфиопского эспрессо</p>
-                <p class="product__weight product__weight_ml">300</p>
+                <img src="./img/product-5.svg" alt="чашка кофе" class="product__img">
+
+                <div class="product-info">
+                    <h2 class="product__price h2">160</h2>
+                    <p class="product__description">Флет уайт с насыщенным вкусом эфиопского эспрессо</p>
+                    <p class="product__weight product__weight_ml">300</p>
+                </div>
             </div>
 
             <div class="product">
-                <img src="./img/product-6.png" alt="чашка кофе" class="product__img">
-                <p class="product__price">270</p>
-                <p class="product__description">Латте на овсяном молоке с добавлением корицы</p>
-                <p class="product__weight product__weight_ml">300</p>
+                <img src="./img/product-6.svg" alt="чашка кофе" class="product__img">
+
+                <div class="product-info">
+                    <h2 class="product__price h2">270</h2>
+                    <p class="product__description">Латте на овсяном молоке с добавлением корицы</p>
+                    <p class="product__weight product__weight_ml">300</p>
+                </div>
             </div>
 
             <div class="product">
-                <img src="./img/product-7.png" alt="чашка кофе" class="product__img">
-                <p class="product__price">180</p>
-                <p class="product__description">Двойной эспрессо с высоким зарядом энергии</p>
-                <p class="product__weight product__weight_ml">300</p>
+                <img src="./img/product-7.svg" alt="чашка кофе" class="product__img">
+
+                <div class="product-info">
+                    <h2 class="product__price h2">180</h2>
+                    <p class="product__description">Двойной эспрессо с высоким зарядом энергии</p>
+                    <p class="product__weight product__weight_ml">300</p>
+                </div>
             </div>
 
             <div class="product">
-                <img src="./img/product-8.png" alt="чашка кофе" class="product__img">
-                <p class="product__price">240</p>
-                <p class="product__description">Капучино на соевом молоке с ореховым сиропом</p>
-                <p class="product__weight product__weight_ml">300</p>
+                <img src="./img/product-8.svg" alt="чашка кофе" class="product__img">
+
+                <div class="product-info">
+                    <h2 class="product__price h2">240</h2>
+                    <p class="product__description">Капучино на соевом молоке с ореховым сиропом</p>
+                    <p class="product__weight product__weight_ml">300</p>
+                </div>
             </div>
         </div>
 
         <div class="product-box" id="dessert">
             <div class="product">
                 <img src="" alt="" class="product__img">
-                <p class="product__price">240</p>
-                <p class="product__description">Синабон с ароматной корицей и глазурью</p>
-                <p class="product__weight product__weight_gr">250</p>
+
+                <div class="product-info">
+                    <h2 class="product__price h2">240</h2>
+                    <p class="product__description">Синабон с ароматной корицей и глазурью</p>
+                    <p class="product__weight product__weight_gr">250</p>
+                </div>
             </div>
 
             <div class="product">
                 <img src="" alt="" class="product__img">
-                <p class="product__price">270</p>
-                <p class="product__description">Воздушная датская слойка с нежным кремом</p>
-                <p class="product__weight product__weight_gr">250</p>
+
+                <div class="product-info">
+                    <h2 class="product__price h2">270</h2>
+                    <p class="product__description">Воздушная датская слойка с нежным кремом</p>
+                    <p class="product__weight product__weight_gr">250</p>
+                </div>
             </div>
 
             <div class="product">
                 <img src="" alt="" class="product__img">
-                <p class="product__price">360</p>
-                <p class="product__description">Нежный крем-брюле с ягодамии карамельной корочкой </p>
-                <p class="product__weight product__weight_gr">150</p>
+
+                <div class="product-info">
+                    <h2 class="product__price h2">360</h2>
+                    <p class="product__description">Нежный крем-брюле с ягодамии карамельной корочкой </p>
+                    <p class="product__weight product__weight_gr">150</p>
+                </div>
             </div>
 
             <div class="product">
                 <img src="" alt="" class="product__img">
-                <p class="product__price">270</p>
-                <p class="product__description">Улитка с яблочно-лимоннымджемом и изюмом</p>
-                <p class="product__weight product__weight_gr">250</p>
+
+                <div class="product-info">
+                    <h2 class="product__price h2">270</h2>
+                    <p class="product__description">Улитка с яблочно-лимоннымджемом и изюмом</p>
+                    <p class="product__weight product__weight_gr">250</p>
+                </div>
             </div>
 
             <div class="product">
                 <img src="" alt="" class="product__img">
-                <p class="product__price">160</p>
-                <p class="product__description">Шоколадно-кофейный торт с глубоким вкусом какао</p>
-                <p class="product__weight product__weight_gr">170</p>
+
+                <div class="product-info">
+                    <h2 class="product__price h2">160</h2>
+                    <p class="product__description">Шоколадно-кофейный торт с глубоким вкусом какао</p>
+                    <p class="product__weight product__weight_gr">170</p>
+                </div>
             </div>
 
             <div class="product">
                 <img src="" alt="" class="product__img">
-                <p class="product__price">180</p>
-                <p class="product__description">Шоколадная тарталетка с кремом и малиной</p>
-                <p class="product__weight product__weight_gr">150</p>
+
+                <div class="product-info">
+                    <h2 class="product__price h2">180</h2>
+                    <p class="product__description">Шоколадная тарталетка с кремом и малиной</p>
+                    <p class="product__weight product__weight_gr">150</p>
+                </div>
             </div>
 
             <div class="product">
                 <img src="" alt="" class="product__img">
-                <p class="product__price">240</p>
-                <p class="product__description">Классический медовик со сливочным кремом</p>
-                <p class="product__weight product__weight_gr">250</p>
+
+                <div class="product-info">
+                    <h2 class="product__price h2">240</h2>
+                    <p class="product__description">Классический медовик со сливочным кремом</p>
+                    <p class="product__weight product__weight_gr">250</p>
+                </div>
             </div>
 
             <div class="product">
                 <img src="" alt="" class="product__img">
-                <p class="product__price">160</p>
-                <p class="product__description">Торт с нежным кремом, корицей и шоколадом</p>
-                <p class="product__weight product__weight_gr">300</p>
+
+                <div class="product-info">
+                    <h2 class="product__price h2">160</h2>
+                    <p class="product__description">Торт с нежным кремом, корицей и шоколадом</p>
+                    <p class="product__weight product__weight_gr">300</p>
+                </div>
             </div>
         </div>
 
         <div class="product-box" id="snacks">
             <div class="product">
                 <img src="" alt="" class="product__img">
-                <p class="product__price">240</p>
-                <p class="product__description">Миндаль — идеальная закуска для перекуса</p>
-                <p class="product__weight product__weight_gr">200</p>
+
+                <div class="product-info">
+                    <h2 class="product__price h2">240</h2>
+                    <p class="product__description">Миндаль — идеальная закуска для перекуса</p>
+                    <p class="product__weight product__weight_gr">200</p>
+                </div>
             </div>
 
             <div class="product">
                 <img src="" alt="" class="product__img">
-                <p class="product__price">360</p>
-                <p class="product__description">Классическое печенье с кусочками шоколада</p>
-                <p class="product__weight product__weight_gr">250</p>
+
+                <div class="product-info">
+                    <h2 class="product__price h2">360</h2>
+                    <p class="product__description">Классическое печенье с кусочками шоколада</p>
+                    <p class="product__weight product__weight_gr">250</p>
+                </div>
             </div>
 
             <div class="product">
                 <img src="" alt="" class="product__img">
-                <p class="product__price">270</p>
-                <p class="product__description">Баранки с легкой солью — отличное дополнение к кофе</p>
-                <p class="product__weight product__weight_gr">350</p>
+
+                <div class="product-info">
+                    <h2 class="product__price h2">270</h2>
+                    <p class="product__description">Баранки с легкой солью — отличное дополнение к кофе</p>
+                    <p class="product__weight product__weight_gr">350</p>
+                </div>
             </div>
 
             <div class="product">
                 <img src="" alt="" class="product__img">
-                <p class="product__price">160</p>
-                <p class="product__description">Булочка с маком, покрытая нежной сахарной глазурью</p>
-                <p class="product__weight product__weight_gr">150</p>
+
+                <div class="product-info">
+                    <h2 class="product__price h2">160</h2>
+                    <p class="product__description">Булочка с маком, покрытая нежной сахарной глазурью</p>
+                    <p class="product__weight product__weight_gr">150</p>
+                </div>
             </div>
 
             <div class="product">
                 <img src="" alt="" class="product__img">
-                <p class="product__price">270</p>
-                <p class="product__description">Свежий, хрустящий кешью — полезный перекус</p>
-                <p class="product__weight product__weight_gr">300</p>
+
+                <div class="product-info">
+                    <h2 class="product__price h2">270</h2>
+                    <p class="product__description">Свежий, хрустящий кешью — полезный перекус</p>
+                    <p class="product__weight product__weight_gr">300</p>
+                </div>
             </div>
 
             <div class="product">
                 <img src="" alt="" class="product__img">
-                <p class="product__price">160</p>
-                <p class="product__description">Мягкое печенье с начинкой из шоколада </p>
-                <p class="product__weight product__weight_gr">150</p>
+
+                <div class="product-info">
+                    <h2 class="product__price h2">160</h2>
+                    <p class="product__description">Мягкое печенье с начинкой из шоколада </p>
+                    <p class="product__weight product__weight_gr">150</p>
+                </div>
             </div>
 
             <div class="product">
                 <img src="" alt="" class="product__img">
-                <p class="product__price">180</p>
-                <p class="product__description">Нежные панкейки с сладким медом и маслом</p>
-                <p class="product__weight product__weight_gr">300</p>
+
+                <div class="product-info">
+                    <h2 class="product__price h2">180</h2>
+                    <p class="product__description">Нежные панкейки с сладким медом и маслом</p>
+                    <p class="product__weight product__weight_gr">300</p>
+                </div>
             </div>
 
             <div class="product">
                 <img src="" alt="" class="product__img">
-                <p class="product__price">240</p>
-                <p class="product__description">Сытные треугольники с сырной начинкой</p>
-                <p class="product__weight product__weight_gr">250</p>
+                <div class="product-info">
+                    <h2 class="product__price h2">240</h2>
+                    <p class="product__description">Сытные треугольники с сырной начинкой</p>
+                    <p class="product__weight product__weight_gr">250</p>
+                </div>
             </div>
         </div>
     </section>

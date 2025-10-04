@@ -20,10 +20,6 @@ a {
     text-decoration-line: none;
 }
 
-.title {
-    padding-bottom: 3rem;
-}
-
 .h1 {
     font-family: inherit;
     font-size: 3rem; // 48px
@@ -55,16 +51,15 @@ a {
 
 .button {
     font-family: inherit;
-    font-size: 1rem;
     font-weight: $fw-semi-bold;
-    line-height: 20px;
     color: $color-border;
 
     text-align: center;
 
     border: 1px solid $color-border;
     border-radius: $border-radius;
-    padding: 1rem 36px;
+
+    background-color: transparent;
 
     cursor: pointer;
 
@@ -83,7 +78,7 @@ a {
 
 .title {
     padding-top: 8rem;
-    padding-bottom: 4rem;
+    padding-bottom: 3rem;
 }
 
 .center {
@@ -117,6 +112,14 @@ a {
         line-height: 20px;
         color: $color-title;
     }
+
+    &__button {
+        font-size: 1rem;
+        line-height: 20px;
+        padding: 1rem;
+
+        width: 169px;
+    }
 }
 
 .header-content {
@@ -145,6 +148,12 @@ a {
     }
 
     &__button {
+        font-size: 1rem;
+        line-height: 20px;
+        padding: 1rem;
+
+        width: 366px;
+
         margin-top: 1rem;
     }
 
@@ -217,17 +226,30 @@ a {
         border-radius: $border-radius $border-radius $border-radius 0;
 
         display: flex;
-        gap: 20px;
 
         width: 584px;
+        height: 292px;
+
+        &:hover .about__img {
+            width: 130%;
+            height: 130%;
+        }
+    }
+
+    &__img-box {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        width: 50%;
+        overflow: hidden;
+
+        border-top-left-radius: $border-radius;
     }
 
     &__img {
-        //display: block;
-        width: 50%;
-        height: 292px;
-
-        border-top-left-radius: $border-radius
+        width: 100%;
+        height: 100%;
     }
 
     &__subtitle {
@@ -241,7 +263,7 @@ a {
         gap: 7px;
 
         width: 50%;
-        padding: 20px 20px 20px 0;
+        padding: 20px;
     }
 
     &__text {
@@ -249,14 +271,96 @@ a {
 
         width: 100%;
     }
-
-
 }
 
 .about-content {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
+}
+
+.menu {
+    background-color: $color-background;
+
+    &__button {
+        font-size: 0.875rem; // 14px
+        line-height: 17px;
+        padding: 0.875rem;
+
+        width: 120px;
+    }
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-category {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.product-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.product {
+    background-color: $color-input;
+    border-radius: $border-radius;
+
+    overflow: hidden;
+
+    width: 276px;
+
+    &__img {
+        //background-color: transparent;
+        width: 100%;
+    }
+
+    &__price::after {
+        content: '₽';
+    }
+
+    &__description {
+        font-size: 14px;
+        font-weight: $fw-regular;
+        line-height: 17px;
+        color: $color-title;
+    }
+
+    &__weight {
+        font-size: 14px;
+        font-weight: $fw-regular;
+        line-height: 17px;
+
+        color: $color-text;
+
+        &_ml::after {
+            content: ' мл';
+        }
+
+        &_gr::after {
+            content: ' гр';
+        }
+    }
+
+    &:hover .product__img {
+        transform: scale(1.1);
+    }
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 20px;
+
+    background-color: $color-text-background;
 }
 
 // .find-us {
