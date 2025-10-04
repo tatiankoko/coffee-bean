@@ -142,16 +142,19 @@
         <header class="menu-header title">
             <h1 class="h1">Меню</h1>
 
-            <div class="menu-category">
-                <button class="menu__button button">Кофе</button>
-                <button class="menu__button button">Десерты</button>
-                <button class="menu__button button">Закуски</button>
-            </div>
+            <fieldset class="menu-category">
+                <input type="radio" id="category-coffee" name="category" class="menu__togglebutton" checked>
+                <label for="category-coffee" class="menu__button button">Кофе</label>
+                <input type="radio" id="category-dessert" name="category" class="menu__togglebutton">
+                <label for="category-dessert" class="menu__button button">Десерты</label>
+                <input type="radio" id="category-snacks" name="category" class="menu__togglebutton">
+                <label for="category-snacks" class="menu__button button">Закуски</label>
+            </fieldset>
         </header>
 
         <div class="product-box" id="coffee">
             <div class="product">
-                <img src="./img/product-1.svg" alt="чашка кофе" class="product__img">
+                <img src="./img/product-1-1.png" alt="чашка кофе" class="product__img">
 
                 <div class="product-info">
                     <h2 class="product__price h2">240</h2>
@@ -161,7 +164,7 @@
             </div>
 
             <div class="product">
-                <img src="./img/product-2.svg" alt="чашка кофе" class="product__img">
+                <img src="./img/product-1-2.png" alt="чашка кофе" class="product__img">
 
                 <div class="product-info">
                     <h2 class="product__price h2">270</h2>
@@ -171,7 +174,7 @@
             </div>
 
             <div class="product">
-                <img src="./img/product-3.svg" alt="чашка кофе" class="product__img">
+                <img src="./img/product-1-3.png" alt="чашка кофе" class="product__img">
 
                 <div class="product-info">
                     <h2 class="product__price h2">360</h2>
@@ -181,7 +184,7 @@
             </div>
 
             <div class="product">
-                <img src="./img/product-4.svg" alt="чашка кофе" class="product__img">
+                <img src="./img/product-1-4.png" alt="чашка кофе" class="product__img">
 
                 <div class="product-info">
                     <h2 class="product__price h2">160</h2>
@@ -191,7 +194,7 @@
             </div>
 
             <div class="product">
-                <img src="./img/product-5.svg" alt="чашка кофе" class="product__img">
+                <img src="./img/product-1-5.png" alt="чашка кофе" class="product__img">
 
                 <div class="product-info">
                     <h2 class="product__price h2">160</h2>
@@ -201,7 +204,7 @@
             </div>
 
             <div class="product">
-                <img src="./img/product-6.svg" alt="чашка кофе" class="product__img">
+                <img src="./img/product-1-6.png" alt="чашка кофе" class="product__img">
 
                 <div class="product-info">
                     <h2 class="product__price h2">270</h2>
@@ -211,7 +214,7 @@
             </div>
 
             <div class="product">
-                <img src="./img/product-7.svg" alt="чашка кофе" class="product__img">
+                <img src="./img/product-1-7.png" alt="чашка кофе" class="product__img">
 
                 <div class="product-info">
                     <h2 class="product__price h2">180</h2>
@@ -221,7 +224,7 @@
             </div>
 
             <div class="product">
-                <img src="./img/product-8.svg" alt="чашка кофе" class="product__img">
+                <img src="./img/product-1-8.png" alt="чашка кофе" class="product__img">
 
                 <div class="product-info">
                     <h2 class="product__price h2">240</h2>
@@ -233,7 +236,7 @@
 
         <div class="product-box" id="dessert">
             <div class="product">
-                <img src="" alt="" class="product__img">
+                <img src="./img/product-2-1.png" alt="" class="product__img">
 
                 <div class="product-info">
                     <h2 class="product__price h2">240</h2>
@@ -243,7 +246,7 @@
             </div>
 
             <div class="product">
-                <img src="" alt="" class="product__img">
+                <img src="./img/product-2-2.png" alt="" class="product__img">
 
                 <div class="product-info">
                     <h2 class="product__price h2">270</h2>
@@ -253,27 +256,27 @@
             </div>
 
             <div class="product">
-                <img src="" alt="" class="product__img">
+                <img src="./img/product-2-3.png" alt="" class="product__img">
 
                 <div class="product-info">
                     <h2 class="product__price h2">360</h2>
-                    <p class="product__description">Нежный крем-брюле с ягодамии карамельной корочкой </p>
+                    <p class="product__description">Нежный крем-брюле с ягодами и карамельной корочкой </p>
                     <p class="product__weight product__weight_gr">150</p>
                 </div>
             </div>
 
             <div class="product">
-                <img src="" alt="" class="product__img">
+                <img src="./img/product-2-4.png" alt="" class="product__img">
 
                 <div class="product-info">
                     <h2 class="product__price h2">270</h2>
-                    <p class="product__description">Улитка с яблочно-лимоннымджемом и изюмом</p>
+                    <p class="product__description">Улитка с яблочно-лимонным джемом и изюмом</p>
                     <p class="product__weight product__weight_gr">250</p>
                 </div>
             </div>
 
             <div class="product">
-                <img src="" alt="" class="product__img">
+                <img src="./img/product-2-5.png" alt="" class="product__img">
 
                 <div class="product-info">
                     <h2 class="product__price h2">160</h2>
@@ -283,7 +286,7 @@
             </div>
 
             <div class="product">
-                <img src="" alt="" class="product__img">
+                <img src="./img/product-2-6.png" alt="" class="product__img">
 
                 <div class="product-info">
                     <h2 class="product__price h2">180</h2>
@@ -293,7 +296,7 @@
             </div>
 
             <div class="product">
-                <img src="" alt="" class="product__img">
+                <img src="./img/product-2-7.png" alt="" class="product__img">
 
                 <div class="product-info">
                     <h2 class="product__price h2">240</h2>
@@ -303,7 +306,7 @@
             </div>
 
             <div class="product">
-                <img src="" alt="" class="product__img">
+                <img src="./img/product-2-8.png" alt="" class="product__img">
 
                 <div class="product-info">
                     <h2 class="product__price h2">160</h2>
@@ -315,7 +318,7 @@
 
         <div class="product-box" id="snacks">
             <div class="product">
-                <img src="" alt="" class="product__img">
+                <img src="./img/product-3-1.png" alt="" class="product__img">
 
                 <div class="product-info">
                     <h2 class="product__price h2">240</h2>
@@ -325,7 +328,7 @@
             </div>
 
             <div class="product">
-                <img src="" alt="" class="product__img">
+                <img src="./img/product-3-2.png" alt="" class="product__img">
 
                 <div class="product-info">
                     <h2 class="product__price h2">360</h2>
@@ -335,7 +338,7 @@
             </div>
 
             <div class="product">
-                <img src="" alt="" class="product__img">
+                <img src="./img/product-3-3.png" alt="" class="product__img">
 
                 <div class="product-info">
                     <h2 class="product__price h2">270</h2>
@@ -345,7 +348,7 @@
             </div>
 
             <div class="product">
-                <img src="" alt="" class="product__img">
+                <img src="./img/product-3-4.png" alt="" class="product__img">
 
                 <div class="product-info">
                     <h2 class="product__price h2">160</h2>
@@ -355,7 +358,7 @@
             </div>
 
             <div class="product">
-                <img src="" alt="" class="product__img">
+                <img src="./img/product-3-5.png" alt="" class="product__img">
 
                 <div class="product-info">
                     <h2 class="product__price h2">270</h2>
@@ -365,7 +368,7 @@
             </div>
 
             <div class="product">
-                <img src="" alt="" class="product__img">
+                <img src="./img/product-3-6.png" alt="" class="product__img">
 
                 <div class="product-info">
                     <h2 class="product__price h2">160</h2>
@@ -375,7 +378,7 @@
             </div>
 
             <div class="product">
-                <img src="" alt="" class="product__img">
+                <img src="./img/product-3-7.png" alt="" class="product__img">
 
                 <div class="product-info">
                     <h2 class="product__price h2">180</h2>
@@ -385,7 +388,7 @@
             </div>
 
             <div class="product">
-                <img src="" alt="" class="product__img">
+                <img src="./img/product-3-8.png" alt="" class="product__img">
                 <div class="product-info">
                     <h2 class="product__price h2">240</h2>
                     <p class="product__description">Сытные треугольники с сырной начинкой</p>
@@ -396,6 +399,8 @@
     </section>
 
     <section class="reviews center" id="reviews">
+        <h1 class="title h1">Отзывы</h1>
+
         <div class="review">
             <header class="review-info">
                 <img src="" alt="" class="review__img">
@@ -423,49 +428,74 @@
                     <h2 class="contacts__title h2">Контакты</h2>
 
                     <div class="contacts-item">
-                        <img src="" alt="иконка телефона" class="contacts__img">
-                        <a href="tel:+7(999)9999999" class="contacts__link">+7 (999) 999 99-99</a>
+                        <svg class="contacts__img" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.20835 12.4584L7.66669 14.0001C7.34169 14.3251 6.82502 14.3251 6.49169 14.0084C6.40002 13.9167 6.30835 13.8334 6.21669 13.7417C5.35835 12.8751 4.58335 11.9667 3.89169 11.0167C3.20835 10.0667 2.65835 9.11675 2.25835 8.17508C1.86669 7.22508 1.66669 6.31675 1.66669 5.45008C1.66669 4.88341 1.76669 4.34175 1.96669 3.84175C2.16669 3.33341 2.48335 2.86675 2.92502 2.45008C3.45835 1.92508 4.04169 1.66675 4.65835 1.66675C4.89169 1.66675 5.12502 1.71675 5.33335 1.81675C5.55002 1.91675 5.74169 2.06675 5.89169 2.28341L7.82502 5.00841C7.97502 5.21675 8.08335 5.40841 8.15835 5.59175C8.23335 5.76675 8.27502 5.94175 8.27502 6.10008C8.27502 6.30008 8.21669 6.50008 8.10002 6.69175C7.99169 6.88341 7.83335 7.08341 7.63335 7.28341L7.00002 7.94175C6.90835 8.03341 6.86669 8.14175 6.86669 8.27508C6.86669 8.34175 6.87502 8.40008 6.89169 8.46675C6.91669 8.53341 6.94169 8.58341 6.95835 8.63341C7.10835 8.90841 7.36669 9.26675 7.73335 9.70008C8.10835 10.1334 8.50835 10.5751 8.94169 11.0167C9.02502 11.1001 9.11669 11.1834 9.20002 11.2667C9.53335 11.5917 9.54169 12.1251 9.20835 12.4584Z"
+                                fill="#45403D" />
+                            <path
+                                d="M18.3083 15.275C18.3083 15.5083 18.2667 15.75 18.1833 15.9833C18.1583 16.05 18.1333 16.1166 18.1 16.1833C17.9583 16.4833 17.775 16.7666 17.5333 17.0333C17.125 17.4833 16.675 17.8083 16.1667 18.0166C16.1583 18.0166 16.15 18.025 16.1417 18.025C15.65 18.225 15.1167 18.3333 14.5417 18.3333C13.6917 18.3333 12.7833 18.1333 11.825 17.725C10.8667 17.3166 9.90833 16.7666 8.95833 16.075C8.63333 15.8333 8.30833 15.5916 8 15.3333L10.725 12.6083C10.9583 12.7833 11.1667 12.9166 11.3417 13.0083C11.3833 13.025 11.4333 13.05 11.4917 13.075C11.5583 13.1 11.625 13.1083 11.7 13.1083C11.8417 13.1083 11.95 13.0583 12.0417 12.9666L12.675 12.3416C12.8833 12.1333 13.0833 11.975 13.275 11.875C13.4667 11.7583 13.6583 11.7 13.8667 11.7C14.025 11.7 14.1917 11.7333 14.375 11.8083C14.5583 11.8833 14.75 11.9916 14.9583 12.1333L17.7167 14.0916C17.9333 14.2416 18.0833 14.4166 18.175 14.625C18.2583 14.8333 18.3083 15.0416 18.3083 15.275Z"
+                                fill="#45403D" />
+                        </svg>
+
+                        <a href="tel:+7(999)9999999" class="contacts__link text">+7 (999) 999 99-99</a>
                     </div>
 
                     <div class="contacts-item">
-                        <img src="" alt="иконка email" class="contacts__img">
-                        <a href="mailto:zernyshko@mail.ru" class="contacts__link">zernyshko@mail.ru</a>
+                        <svg class="contacts__img" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14.1667 2.91675H5.83335C3.33335 2.91675 1.66669 4.16675 1.66669 7.08342V12.9167C1.66669 15.8334 3.33335 17.0834 5.83335 17.0834H14.1667C16.6667 17.0834 18.3334 15.8334 18.3334 12.9167V7.08342C18.3334 4.16675 16.6667 2.91675 14.1667 2.91675ZM14.5584 7.99175L11.95 10.0751C11.4 10.5167 10.7 10.7334 10 10.7334C9.30002 10.7334 8.59169 10.5167 8.05002 10.0751L5.44169 7.99175C5.17502 7.77508 5.13335 7.37508 5.34169 7.10841C5.55835 6.84175 5.95002 6.79175 6.21669 7.00841L8.82502 9.09175C9.45835 9.60008 10.5334 9.60008 11.1667 9.09175L13.775 7.00841C14.0417 6.79175 14.4417 6.83341 14.65 7.10841C14.8667 7.37508 14.825 7.77508 14.5584 7.99175Z"
+                                fill="#45403D" />
+                        </svg>
+
+                        <a href="mailto:zernyshko@mail.ru" class="contacts__link text">zernyshko@mail.ru</a>
                     </div>
 
                     <div class="contacts-item">
-                        <img src="" alt="иконка локации" class="contacts__img">
-                        <a href="https://yandex.ru/maps/-/CLBGeGZw" class="contacts__link">СПб, Коржекова, 5</a>
+                        <svg class="contacts__img" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.1834 7.04158C16.3084 3.19159 12.95 1.45825 10 1.45825C10 1.45825 10 1.45825 9.99168 1.45825C7.05002 1.45825 3.68335 3.18325 2.80835 7.03325C1.83335 11.3333 4.46669 14.9749 6.85002 17.2666C7.73335 18.1166 8.86668 18.5416 10 18.5416C11.1334 18.5416 12.2667 18.1166 13.1417 17.2666C15.525 14.9749 18.1584 11.3416 17.1834 7.04158ZM10 11.2166C8.55002 11.2166 7.37502 10.0416 7.37502 8.59159C7.37502 7.14158 8.55002 5.96658 10 5.96658C11.45 5.96658 12.625 7.14158 12.625 8.59159C12.625 10.0416 11.45 11.2166 10 11.2166Z"
+                                fill="#45403D" />
+                        </svg>
+
+                        <a href="https://yandex.ru/maps/-/CLBGeGZw" class="contacts__link text">СПб, Коржекова, 5</a>
                     </div>
                 </div>
 
-                <form action="" method="get" class="booking">
+                <form action="#" method="get" class="booking">
                     <h2 class="booking__title h2">Бронирование</h2>
 
                     <div class="booking-info">
-                        <input class="booking__input" type="text" name="booking" id="client-name"
+                        <input class="booking__input text" type="text" name="booking" id="client-name"
                             placeholder="Ваше имя">
-                        <input class="booking__input" type="tel" name="booking" id="client-tel"
+                        <input class="booking__input text" type="tel" name="booking" id="client-tel"
                             placeholder="Ваш номер телефона"
                             pattern="^(8|\+7)(\s|\(|-)?(\d{3})(\s|\)|-)?(\d{3})(\s|-)?(\d{2})(\s|-)?(\d{2})$" required>
-                        <input class="booking__input" type="text" name="booking" id="client-text"
+                        <input class="booking__input text" type="text" name="booking" id="client-text"
                             placeholder="Комментарий">
                     </div>
 
-                    <button class="booking__button">Забронировать</button>
+                    <button class="booking__button button">Забронировать</button>
                 </form>
             </div>
-        </div>
 
-        <div class="find-us__map">
-            <!-- <div style="position:relative;overflow:hidden;"><a
-                    href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps"
-                    style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a
-                    href="https://yandex.ru/maps/2/saint-petersburg/house/pionerskaya_ulitsa_27a/Z0kYdA9pTEMCQFtjfXV0eX5iYQ==/?ll=30.348969%2C59.955890&utm_medium=mapframe&utm_source=maps&z=12"
+            <!-- <div > -->
+            <div class="find-us__map">
+                <a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps"
+                    style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a>
+
+                <a href="https://yandex.ru/maps/2/saint-petersburg/house/pionerskaya_ulitsa_27a/Z0kYdA9pTEMCQFtjfXV0eX5iYQ==/?ll=30.348969%2C59.955890&utm_medium=mapframe&utm_source=maps&z=12"
                     style="color:#eee;font-size:12px;position:absolute;top:14px;">Пионерская улица, 27А на карте
-                    Санкт‑Петербурга, ближайшее метро Чкаловская — Яндекс Карты</a><iframe
-                    src="https://yandex.ru/map-widget/v1/?ll=30.348969%2C59.955890&mode=whatshere&utm_source=share&whatshere%5Bpoint%5D=30.289565%2C59.958215&whatshere%5Bzoom%5D=17&z=12"
-                    width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
-            </div> -->
+                    Санкт‑Петербурга, ближайшее метро Чкаловская — Яндекс Карты</a>
+
+                <iframe
+                    style="position:relative; flex-grow: 1; flex-basis: 379px; width: 100%; height: 100%; border: none;"
+                    src="https://yandex.ru/map-widget/v1/?ll=30.348969%2C59.955890&mode=whatshere&utm_source=share&whatshere%5Bpoint%5D=30.289565%2C59.958215&whatshere%5Bzoom%5D=17&z=12">
+                </iframe>
+            </div>
+            <!-- </div> -->
         </div>
     </section>
 
@@ -473,18 +503,18 @@
         <div class="footer-content center">
             <div class="footer-info">
                 <a class="footer__logo" href="#"><img src="./img/logo.svg" alt="логотип кофейни"></a>
-                <p class="footer__rights">© 2025 Все права защищены</p>
+                <p class="footer__rights text">© 2025 Все права защищены</p>
             </div>
 
             <div class="footer-links">
                 <nav class="footer__nav">
-                    <a href="#about" class="footer__link">О нас</a>
-                    <a href="#menu" class="footer__link">Меню</a>
-                    <a href="#reviews" class="footer__link">Отзывы</a>
-                    <a href="#find-us" class="footer__link">Контакты</a>
+                    <a href="#about" class="footer__link text">О нас</a>
+                    <a href="#menu" class="footer__link text">Меню</a>
+                    <a href="#reviews" class="footer__link text">Отзывы</a>
+                    <a href="#find-us" class="footer__link text">Контакты</a>
                 </nav>
 
-                <div class="footer-icons">
+                <div class="footer__icons">
                     <a href="https://vk.com/" class="footer__icon-link"><svg width="14" height="15" viewBox="0 0 14 15"
                             fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_100_1042)">

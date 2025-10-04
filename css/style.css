@@ -126,6 +126,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -245,6 +247,8 @@ a {
   display: flex;
   width: 584px;
   height: 292px;
+  -webkit-box-shadow: 0px 4px 20px 0px #00000024;
+          box-shadow: 0px 4px 20px 0px #00000024;
 }
 
 .about__item:hover .about__img {
@@ -310,6 +314,15 @@ a {
   background-color: #F6F5F4;
 }
 
+.menu__togglebutton {
+  display: none;
+}
+
+.menu__togglebutton:checked + .menu__button {
+  background-color: #A26539;
+  color: #FFFFFF;
+}
+
 .menu__button {
   font-size: 0.875rem;
   line-height: 17px;
@@ -321,6 +334,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -337,6 +352,8 @@ a {
       -ms-flex-align: center;
           align-items: center;
   gap: 7px;
+  padding: 0;
+  border: none;
 }
 
 .product-box {
@@ -349,14 +366,26 @@ a {
 }
 
 .product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #DEDEDE;
   border-radius: 24px;
   overflow: hidden;
+  -webkit-box-shadow: 0px 4px 20px 0px #00000024;
+          box-shadow: 0px 4px 20px 0px #00000024;
   width: 276px;
 }
 
 .product__img {
+  z-index: 0;
   width: 100%;
+  overflow: hidden;
+  display: block;
 }
 
 .product__price::after {
@@ -400,6 +429,228 @@ a {
           flex-direction: column;
   gap: 7px;
   padding: 20px;
+  z-index: 1;
+  overflow: hidden;
   background-color: #FFFFFF;
+}
+
+.reviews {
+  background-color: #F6F5F4;
+}
+
+.find-us {
+  background-color: #F6F5F4;
+  padding-bottom: 4rem;
+}
+
+.find-us__map {
+  position: relative;
+  min-width: 379px;
+  min-height: 379px;
+  -ms-flex-preferred-size: 379px;
+      flex-basis: 379px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-radius: 24px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 4px 20px 0px #00000024;
+          box-shadow: 0px 4px 20px 0px #00000024;
+}
+
+.contacts-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 2rem;
+  height: 520px;
+}
+
+.contacts-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 14px;
+}
+
+.contacts {
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 14px;
+  width: 379px;
+  -webkit-box-shadow: 0px 4px 20px 0px #00000024;
+          box-shadow: 0px 4px 20px 0px #00000024;
+}
+
+.contacts__title {
+  margin-bottom: 10px;
+}
+
+.contacts__link:hover {
+  color: #A26539;
+}
+
+.contacts-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.contacts-item:hover .contacts__img path {
+  fill: #A26539;
+}
+
+.booking {
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+  width: 379px;
+  -webkit-box-shadow: 0px 4px 20px 0px #00000024;
+          box-shadow: 0px 4px 20px 0px #00000024;
+}
+
+.booking__input {
+  color: #45403D;
+  border: 1px solid #DEDEDE;
+  border-radius: 24px;
+  text-decoration: none;
+  outline: none;
+  padding: 14px 24px 16px 24px;
+}
+
+.booking__input::-webkit-input-placeholder {
+  color: #9A9A9A;
+}
+
+.booking__input:-ms-input-placeholder {
+  color: #9A9A9A;
+}
+
+.booking__input::-ms-input-placeholder {
+  color: #9A9A9A;
+}
+
+.booking__input::placeholder {
+  color: #9A9A9A;
+}
+
+.booking__button {
+  font-size: 14px;
+  line-height: 17px;
+  padding: 14px 24px 16px 24px;
+}
+
+.booking-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 7px;
+}
+
+.footer {
+  background-color: #FFFFFF;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding-top: 43px;
+  padding-bottom: 43px;
+}
+
+.footer__rights {
+  color: #9A9A9A;
+}
+
+.footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+}
+
+.footer__link {
+  font-weight: 600;
+}
+
+.footer__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 14px;
+}
+
+.footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.footer-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 14px;
+}
+
+.footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 18px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 /*# sourceMappingURL=style.css.map */

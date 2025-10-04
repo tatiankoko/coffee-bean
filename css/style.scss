@@ -124,6 +124,7 @@ a {
 
 .header-content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -230,6 +231,8 @@ a {
         width: 584px;
         height: 292px;
 
+        box-shadow: 0px 4px 20px 0px #00000024;
+
         &:hover .about__img {
             width: 130%;
             height: 130%;
@@ -282,6 +285,15 @@ a {
 .menu {
     background-color: $color-background;
 
+    &__togglebutton {
+        display: none;
+
+        &:checked+.menu__button {
+            background-color: $color-border;
+            color: $color-text-background;
+        }
+    }
+
     &__button {
         font-size: 0.875rem; // 14px
         line-height: 17px;
@@ -293,6 +305,7 @@ a {
 
 .menu-header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -301,6 +314,9 @@ a {
     display: flex;
     align-items: center;
     gap: 7px;
+
+    padding: 0;
+    border: none;
 }
 
 .product-box {
@@ -310,16 +326,22 @@ a {
 }
 
 .product {
+    display: flex;
+    flex-direction: column;
+
     background-color: $color-input;
     border-radius: $border-radius;
 
     overflow: hidden;
+    box-shadow: 0px 4px 20px 0px #00000024;
 
     width: 276px;
 
     &__img {
-        //background-color: transparent;
+        z-index: 0;
         width: 100%;
+        overflow: hidden;
+        display: block;
     }
 
     &__price::after {
@@ -360,11 +382,169 @@ a {
     gap: 7px;
     padding: 20px;
 
+    z-index: 1;
+
+    overflow: hidden;
+
     background-color: $color-text-background;
 }
 
-// .find-us {
-//     &__map {
-//         posi
-//     }
-// }
+.reviews {
+    background-color: $color-background;
+}
+
+.find-us {
+    background-color: $color-background;
+    padding-bottom: 4rem;
+
+    &__map {
+        position: relative;
+        min-width: 379px;
+        min-height: 379px;
+
+        flex-basis: 379px;
+        flex-grow: 1;
+
+        border-radius: $border-radius;
+        overflow: hidden;
+
+        box-shadow: 0px 4px 20px 0px #00000024;
+    }
+}
+
+.contacts-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+
+    gap: 2rem;
+
+    height: 520px;
+}
+
+.contacts-info {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contacts {
+    background-color: $color-text-background;
+    padding: 20px;
+    border-radius: $border-radius;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    width: 379px;
+
+    box-shadow: 0px 4px 20px 0px #00000024;
+
+    &__title {
+        margin-bottom: 10px;
+    }
+
+    &__link:hover {
+        color: $color-border;
+    }
+}
+
+.contacts-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &:hover .contacts__img path {
+        fill: $color-border;
+    }
+}
+
+.booking {
+    background-color: $color-text-background;
+    padding: 20px;
+    border-radius: $border-radius;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    width: 379px;
+
+    box-shadow: 0px 4px 20px 0px #00000024;
+
+    &__input {
+        color: $color-title;
+        border: 1px solid $color-input;
+        border-radius: $border-radius;
+        text-decoration: none;
+        outline: none;
+
+        padding: 14px 24px 16px 24px;
+
+        &::placeholder {
+            color: $color-text;
+        }
+    }
+
+    &__button {
+        font-size: 14px;
+        line-height: 17px;
+
+        padding: 14px 24px 16px 24px;
+    }
+}
+
+.booking-info {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.footer {
+    background-color: $color-text-background;
+    align-content: center;
+
+    padding-top: 43px;
+    padding-bottom: 43px;
+
+    &__rights {
+        color: $color-text;
+    }
+
+    &__nav {
+        display: flex;
+        gap: 24px;
+    }
+
+    &__link {
+        font-weight: $fw-semi-bold;
+    }
+
+    &__icons {
+        display: flex;
+        gap: 14px;
+    }
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
