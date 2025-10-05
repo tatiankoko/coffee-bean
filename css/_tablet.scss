@@ -1,9 +1,44 @@
-@media (max-width: 1260px) {
+@media (max-width: 1280px) {
     $width-site-tablet: 876px;
 
     .center {
         padding-left: calc(50% - 438px);
         padding-right: calc(50% - 438px);
+    }
+
+    .title {
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+    }
+
+    .header {
+        &__nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+    }
+
+    .header-info {
+        gap: 24px;
+    }
+
+    .top {
+        height: calc(443px + 5rem + 5rem);
+
+        background-image: url('../img/group-table.png');
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position: top 8rem right;
+
+        &__image {
+            display: none;
+        }
+    }
+
+    .top-content {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
     }
 
     // carousel
@@ -19,6 +54,8 @@
         overflow: auto;
         overscroll-behavior-x: none;
         scroll-snap-type: x mandatory;
+
+        margin-top: -20px;
     }
 
     .about__item {
@@ -44,6 +81,8 @@
         overflow: auto;
         overscroll-behavior-x: none;
         scroll-snap-type: x mandatory;
+
+        margin-top: -20px;
     }
 
     .review {
@@ -59,11 +98,25 @@
     }
 }
 
-@media (min-width: 822px) and (max-width: 924px) {
+//@media (min-width: 822px) and (max-width: 930px) {
+@media (max-width: 930px) {
     $width-site-tablet: 774px;
 
     .center {
         padding-left: calc(50% - 387px);
         padding-right: calc(50% - 387px);
+    }
+
+    .top {
+        background-image: url('../img/top-coffee.png');
+        background-size: 70%;
+        //background-position: top -200px right -20px;
+        background-position: top right -50%; //-130px;
+
+
+    }
+
+    .top-content {
+        padding-bottom: 2rem;
     }
 }
