@@ -1,9 +1,9 @@
 @media (max-width: 1280px) {
-    $width-site-tablet: 876px;
+    $width-site-tablet: 860px;
 
     .center {
-        padding-left: calc(50% - 438px);
-        padding-right: calc(50% - 438px);
+        padding-left: calc(50% - 430px);
+        padding-right: calc(50% - 430px);
     }
 
     .title {
@@ -13,14 +13,10 @@
 
     .header {
         &__nav {
-            display: flex;
-            align-items: center;
-            gap: 24px;
+            //display: flex;
+            //align-items: center;
+            gap: 1.5rem;
         }
-    }
-
-    .header-info {
-        gap: 24px;
     }
 
     .top {
@@ -44,28 +40,29 @@
     // carousel
     .about-content {
         background-color: transparent;
-        padding: 20px 0;
+        padding: 10px 0;
         flex-wrap: nowrap;
         align-items: stretch;
+        align-content: stretch;
         justify-content: flex-start;
-        gap: 16px;
+        gap: 1rem;
         max-width: 100%;
-        margin: 0 auto;
-        overflow: auto;
+        margin: -10px auto 0 auto;
+        overflow-y: visible;
+        overflow-x: auto;
         overscroll-behavior-x: none;
         scroll-snap-type: x mandatory;
-
-        margin-top: -20px;
     }
 
     .about__item {
         flex: 0 0 584px;
         //height: 200px;
         scroll-snap-align: start;
+        box-shadow: 0 4px 10px 0 $color-shadow;
     }
 
     .product-box {
-        gap: 24px;
+        gap: 1rem;
     }
 
     // carousel
@@ -75,7 +72,7 @@
         flex-wrap: nowrap;
         align-items: stretch;
         justify-content: flex-start;
-        gap: 16px;
+        gap: 1rem;
         max-width: 100%;
         margin: 0 auto;
         overflow: auto;
@@ -91,20 +88,38 @@
         scroll-snap-align: start;
     }
 
-    .contacts-box {
+    .find-us-content {
         gap: 1rem;
         //height: 100%;
         //flex-direction: column-reverse;
     }
 }
 
-//@media (min-width: 822px) and (max-width: 930px) {
-@media (max-width: 930px) {
-    $width-site-tablet: 774px;
+// (min-width: 648px) and 
+@media (max-width: 909px) {
+    $width-site-tablet: 600px;
 
     .center {
-        padding-left: calc(50% - 387px);
-        padding-right: calc(50% - 387px);
+        padding-left: calc(50% - 300px);
+        padding-right: calc(50% - 300px);
+    }
+
+    .header {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+
+        // &__nav {
+        //     display: none;
+        // }
+
+        &__button {
+            font-size: 1rem;
+            line-height: 20px;
+            padding: 8px 1rem;
+
+            margin-left: auto;
+            //width: 169px;
+        }
     }
 
     .top {
@@ -112,11 +127,13 @@
         background-size: 70%;
         //background-position: top -200px right -20px;
         background-position: top right -50%; //-130px;
-
-
     }
 
     .top-content {
         padding-bottom: 2rem;
+    }
+
+    .product-box {
+        justify-content: space-between;
     }
 }

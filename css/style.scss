@@ -68,14 +68,6 @@ a {
     }
 }
 
-.paragraph {
-    // todo rename
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 7px;
-}
-
 .title {
     padding-top: 4rem;
     padding-bottom: 3rem;
@@ -97,13 +89,14 @@ a {
     padding-top: 33px;
     padding-bottom: 35px;
 
-    height: 120px;
     width: 100%;
 
     &__nav {
         display: flex;
-        align-items: center;
-        gap: 48px;
+        flex-direction: column;
+        align-items: flex-end;
+        //gap: 3rem;
+        justify-content: flex-end;
     }
 
     &__link {
@@ -126,21 +119,98 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
-.header-info {
+.hamburger-menu {
+    display: none;
+}
+
+.hamburger-checkbox {
+    display: none;
+
+    &:checked+.hamburger::before {
+        top: 11px;
+        transform: rotate(45deg);
+        box-shadow: 0 6px 0 rgba(0, 0, 0, 0); // $color-title
+        transition:
+            box-shadow .15s, top .3s,
+            transform .3s .15s;
+    }
+
+    &:checked+.hamburger::after {
+        bottom: 11px;
+        transform: rotate(-45deg);
+        transition: bottom .3s, transform .3s .15s;
+    }
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+    border: none;
+    background: transparent;
+    width: 36px;
+    height: 26px;
+    //margin: 3px;
+
+    &::before,
+    &::after {
+        content: '';
+        left: 0;
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 4px;
+        border-radius: 10px;
+        background: $color-title;
+    }
+
+    &::before {
+        top: 0;
+        box-shadow: 0 11px 0 $color-title;
+        transition:
+            box-shadow .3s .15s, top .3s .15s,
+            transform .3s;
+    }
+
+    &::after {
+        bottom: 0;
+        transition: bottom .3s .15s, transform .3s;
+    }
+}
+
+.nav-links {
+    list-style: none;
     display: flex;
-    gap: 48px;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 3rem;
+
+    &.show-menu {
+        position: absolute;
+        top: 77px;
+        right: 0;
+        width: calc(100% + 1.5rem);
+        background-color: $color-text-background;
+        //border-top: 1px solid $color-input;
+
+        padding: 0 1.5rem 1.5rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        gap: 14px;
+    }
 }
 
 .top {
     background-color: $color-background;
     position: relative;
-    overflow: hidden;
+    //overflow: hidden;
 
-    height: 770px;
+    //height: 770px;
 
     &__text {
         font-size: 1rem;
@@ -210,21 +280,27 @@ a {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 24px;
+    gap: 1.5rem; //24px;
 
-    //width: 586px;
-    position: absolute;
+    /*position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 1;*/
 
     padding-top: 118px;
     padding-bottom: 208px;
 }
 
+.top-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 7px;
+}
+
 .about {
     background-color: $color-background;
-    scroll-margin-top: 120px;
+    scroll-margin-top: $header-height;
 
     &__item {
         background-color: $color-text-background;
@@ -236,7 +312,7 @@ a {
         width: 584px;
         height: 292px;
 
-        box-shadow: 0 4px 20px 0 #00000024;
+        box-shadow: 0 4px 20px 0 $color-shadow;
 
         &:hover .about__img {
             width: 130%;
@@ -244,7 +320,7 @@ a {
         }
     }
 
-    &__img-box {
+    &__img-wrapper {
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -266,7 +342,7 @@ a {
         margin-bottom: 7px;
     }
 
-    &__text-box {
+    &__text-wrapper {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -277,7 +353,7 @@ a {
     }
 
     &__text {
-        font-size: 14px;
+        font-size: 0.875rem;
 
         width: 100%;
     }
@@ -291,9 +367,26 @@ a {
 
 .menu {
     background-color: $color-background;
-    scroll-margin-top: 120px;
+    scroll-margin-top: $header-height;
+    position: relative;
 
-    &__togglebutton {
+    &__header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__fieldset {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+
+        padding: 0;
+        border: none;
+    }
+
+    &__toggle-button {
         display: none;
 
         &:checked+.menu__button {
@@ -312,41 +405,30 @@ a {
     }
 }
 
-.menu-header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.menu-category {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-
-    padding: 0;
-    border: none;
-}
-
 .product-box {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
 
-    //overflow: hidden;
+    visibility: hidden;
+    opacity: 0.0;
 
-    visibility: visible;
-    opacity: 1.0;
+    transition: visibility 0.5s linear, opacity 0.5s linear;
 
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+    pointer-events: none;
+
+    &_visible {
+        visibility: visible;
+        opacity: 1.0;
+
+        pointer-events: auto;
+    }
 
     &_hidden {
         position: absolute;
+        top: calc(59px + 4rem + 3rem);
 
-        visibility: hidden;
-        opacity: 0.0;
-
-        transition: visibility 0.5s linear, opacity 0.5s linear;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
     }
 }
 
@@ -358,7 +440,7 @@ a {
     border-radius: $border-radius;
 
     overflow: hidden;
-    box-shadow: 0 4px 20px 0 #00000024;
+    box-shadow: 0 4px 20px 0 $color-shadow;
 
     width: 276px;
 
@@ -376,14 +458,14 @@ a {
     }
 
     &__description {
-        font-size: 14px;
+        font-size: 0.875rem;
         font-weight: $fw-regular;
         line-height: 17px;
         color: $color-title;
     }
 
     &__weight {
-        font-size: 14px;
+        font-size: 0.875rem;
         font-weight: $fw-regular;
         line-height: 17px;
 
@@ -418,7 +500,7 @@ a {
 
 .reviews {
     background-color: $color-background;
-    scroll-margin-top: 120px;
+    scroll-margin-top: $header-height;
 }
 
 .reviews-content {
@@ -426,8 +508,6 @@ a {
     justify-content: space-between;
     flex-wrap: wrap;
     row-gap: 2rem;
-
-    //max-height: 448px;
 }
 
 .review {
@@ -438,10 +518,22 @@ a {
     background-color: $color-text-background;
     border-radius: $border-radius;
 
-    box-shadow: 0 4px 20px 0 #00000024;
+    box-shadow: 0 4px 20px 0 $color-shadow;
 
     width: 379px;
     padding: 20px;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        row-gap: 7px;
+        column-gap: 20px;
+
+        height: 63px;
+        width: 100%;
+    }
 
     &__img {
         display: block;
@@ -450,57 +542,58 @@ a {
     }
 }
 
-.review-info {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    row-gap: 7px;
-    column-gap: 20px;
-
-    height: 63px;
-    width: 100%;
-}
-
-// .rating {
-
-// }
-
 .find-us {
     background-color: $color-background;
-    scroll-margin-top: 120px;
+    scroll-margin-top: $header-height;
     padding-bottom: 4rem;
+}
 
-    &__map {
+.map {
+    position: relative;
+    min-height: 319px;
+
+    flex-basis: 379px;
+    flex-grow: 1;
+
+    border-radius: $border-radius;
+    overflow: hidden;
+
+    box-shadow: 0 4px 20px 0 $color-shadow;
+
+    &__link {
+        color: #eee;
+        font-size: 0.75rem;
+        position: absolute;
+        top: 0;
+
+        &_block {
+            top: 14px;
+        }
+    }
+
+    &__frame {
         position: relative;
-        // min-width: 379px;
-        // min-height: 379px;
-
-        flex-basis: 379px;
         flex-grow: 1;
-
-        border-radius: $border-radius;
-        overflow: hidden;
-
-        box-shadow: 0 4px 20px 0 #00000024;
+        flex-basis: 379px;
+        width: 100%;
+        height: 100%;
+        border: none;
     }
 }
 
-.contacts-box {
+.find-us-content {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: flex-start;
 
     gap: 2rem;
-
-    height: 520px;
 }
 
 .contacts-info {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 0.875rem;
 }
 
 .contacts {
@@ -510,11 +603,11 @@ a {
 
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 0.875rem;
 
     width: 379px;
 
-    box-shadow: 0 4px 20px 0 #00000024;
+    box-shadow: 0 4px 20px 0 $color-shadow;
 
     &__title {
         margin-bottom: 10px;
@@ -525,7 +618,7 @@ a {
     }
 }
 
-.contacts-item {
+.contacts-link-wrapper {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -542,11 +635,11 @@ a {
 
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 1.5rem;
 
     width: 379px;
 
-    box-shadow: 0 4px 20px 0 #00000024;
+    box-shadow: 0 4px 20px 0 $color-shadow;
 
     &__input {
         color: $color-title;
@@ -555,7 +648,7 @@ a {
         text-decoration: none;
         outline: none;
 
-        padding: 14px 24px 16px 24px;
+        padding: 0.875rem 1.5rem 1rem 1.5rem;
 
         &::placeholder {
             color: $color-text;
@@ -563,14 +656,14 @@ a {
     }
 
     &__button {
-        font-size: 14px;
+        font-size: 0.875rem;
         line-height: 17px;
 
-        padding: 14px 24px 16px 24px;
+        padding: 0.875rem 1.5rem 1rem 1.5rem;
     }
 }
 
-.booking-info {
+.booking-content {
     display: flex;
     flex-direction: column;
     gap: 7px;
@@ -583,13 +676,19 @@ a {
     padding-top: 43px;
     padding-bottom: 43px;
 
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.875rem;
+    }
+
     &__rights {
         color: $color-text;
     }
 
     &__nav {
         display: flex;
-        gap: 24px;
+        gap: 1.5rem;
     }
 
     &__link {
@@ -598,7 +697,7 @@ a {
 
     &__icons {
         display: flex;
-        gap: 14px;
+        gap: 0.875rem;
     }
 }
 
@@ -607,12 +706,6 @@ a {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-end;
-}
-
-.footer-info {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
 }
 
 .footer-links {

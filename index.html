@@ -16,18 +16,23 @@
 <body>
     <header class="header">
         <div class="header-content center">
-            <a class="header__logo" href="#"><img src="./img/logo.svg" alt="логотип кофейни"></a>
+            <a class="header__logo" href="#"><img src="./img/logo.svg" alt="логотип кофейни зернышко"></a>
 
-            <div class="header-info">
-                <nav class="header__nav">
-                    <a href="#about" class="header__link">О нас</a>
-                    <a href="#menu" class="header__link">Меню</a>
-                    <a href="#reviews" class="header__link">Отзывы</a>
-                    <a href="#find-us" class="header__link">Контакты</a>
-                </nav>
+            <nav class="header__nav">
+                <div class="hamburger-menu">
+                    <input class="hamburger-checkbox" type="checkbox" id="hamburger-checkbox">
+                    <label class="hamburger" for="hamburger-checkbox" ></label>
+<!--                    <div class="hamburger"></div>-->
+                </div>
 
-                <a href="#find-us" class="header__button button">Связаться</a>
-            </div>
+                <ul class="nav-links" onblur="changeCheckBox()">
+                    <li><a href="#about" class="header__link">О нас</a></li>
+                    <li><a href="#menu" class="header__link">Меню</a></li>
+                    <li><a href="#reviews" class="header__link">Отзывы</a></li>
+                    <li><a href="#find-us" class="header__link">Контакты</a></li>
+                    <li><a href="#find-us" class="button header__button">Связаться</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -36,7 +41,7 @@
             <h1 class="top__title h1">Добро пожаловать <br>в «Зернышко»</h1>
             <h2 class="top__subtitle h2">Ароматный кофе и уютная <br>атмосфера каждый день</h2>
 
-            <div class="paragraph">
+            <div class="top-text-wrapper">
                 <p class="top__text">Мы готовим кофе с душой и верим, что каждая чашка — <br>это маленькое наслаждение,
                     созданное
                     для вас.</p>
@@ -49,11 +54,16 @@
             <a href="#menu" class="top__button button">Посмотреть меню</a>
         </div>
 
-        <img src="./img/top-table.png" alt="стол" class="top__image top__image_table" loading="lazy">
-        <img src="./img/top-grains.png" alt="зерна" class="top__image top__image_grains" loading="lazy">
-        <img src="./img/top-coffee.png" alt="кофе" class="top__image top__image_coffee" loading="lazy">
-        <img src="./img/top-cookie.png" alt="печенье" class="top__image top__image_cookie" loading="lazy">
-        <img src="./img/top-cinnamon.png" alt="синнамон" class="top__image top__image_cinnamon" loading="lazy">
+        <img src="./img/top-table.png" alt="овальная деревянная столешница, вид сверху"
+            class="top__image top__image_table" loading="lazy">
+        <img src="./img/top-grains.png" alt="горсть кофейного зерна" class="top__image top__image_grains"
+            loading="lazy">
+        <img src="./img/top-coffee.png" alt="черный кофе в белой кружке, вид сверху"
+            class="top__image top__image_coffee" loading="lazy">
+        <img src="./img/top-cookie.png" alt="печенье с начинкой из шоколада, вид сверху"
+            class="top__image top__image_cookie" loading="lazy">
+        <img src="./img/top-cinnamon.png" alt="синнамон, вид сверху" class="top__image top__image_cinnamon"
+            loading="lazy">
     </section>
 
     <section class="about center" id="about">
@@ -61,77 +71,66 @@
 
         <div class="about-content">
             <div class="about__item">
-                <div class="about__img-box">
-                    <img src="./img/history.jpg" alt="фон кафе" class="about__img" loading="lazy">
+                <div class="about__img-wrapper">
+                    <img src="./img/history.jpg"
+                        alt="кафе внутри, вдоль стены ряд белых столов с желтыми стульями и коричневыми диванами"
+                        class="about__img" loading="lazy">
                 </div>
 
-                <div class="about__text-box">
+                <div class="about__text-wrapper">
                     <h2 class="about__subtitle h2">История</h2>
 
                     <p class="about__text text">«Зернышко» — кофейня, которая родилась из любви к хорошему кофе и
-                        желания
-                        создать
-                        место уюта для каждого.</p>
+                        желания создать место уюта для каждого.</p>
                     <p class="about__text text">Открытая в 2020 году, кофейня быстро стала любимой как для ценителей
-                        кофе,
-                        так и
-                        для
-                        тех, кто просто
-                        ищет спокойное место для отдыха.</p>
+                        кофе, так и для тех, кто просто ищет спокойное место для отдыха.</p>
                 </div>
             </div>
 
             <div class="about__item">
-                <div class="about__img-box">
-                    <img src="./img/philosophy.jpg" alt="чашка кофе" class="about__img" loading="lazy">
+                <div class="about__img-wrapper">
+                    <img src="./img/philosophy.jpg" alt="в руке белая чашка кофе, наливается молоко" class="about__img"
+                        loading="lazy">
                 </div>
 
-                <div class="about__text-box">
+                <div class="about__text-wrapper">
                     <h2 class="about__subtitle h2">Философия</h2>
 
                     <p class="about__text text">Мы верим, что каждая чашка кофе — это особый момент.</p>
                     <p class="about__text text">Стремимся создать теплую дружелюбную атмосферу, где каждый гость
-                        чувствует
-                        себя
-                        как
-                        дома.</p>
+                        чувствует себя как дома.</p>
                     <p class="about__text text">Наши бариста с заботой подходят к каждому заказу, создавая напитки с
-                        любовью
-                        и
-                        вниманием к деталям.</p>
+                        любовью и вниманием к деталям.</p>
                 </div>
             </div>
 
             <div class="about__item">
-                <div class="about__img-box">
-                    <img src="./img/fresh-grain.jpg" alt="кофейное зерно" class="about__img" loading="lazy">
+                <div class="about__img-wrapper">
+                    <img src="./img/fresh-grain.jpg" alt="деревянная миска с кофейными зернами" class="about__img"
+                        loading="lazy">
                 </div>
 
-                <div class="about__text-box">
+                <div class="about__text-wrapper">
                     <h2 class="about__subtitle h2">Свежее зерно</h2>
 
                     <p class="about__text text">Мы используем только свежие зерна и экспериментируем с оригинальными
-                        рецептами,
-                        чтобы
-                        радовать гостей уникальными вкусами.</p>
+                        рецептами, чтобы радовать гостей уникальными вкусами.</p>
                     <p class="about__text text">Наша команда сотрудничает с локальными обжарщиками, поддерживая высокое
-                        качество
-                        и
-                        разнообразие.</p>
+                        качество и разнообразие.</p>
                 </div>
             </div>
 
             <div class="about__item">
-                <div class="about__img-box">
-                    <img src="./img/care-nature.jpg" alt="стаканчик кофе" class="about__img" loading="lazy">
+                <div class="about__img-wrapper">
+                    <img src="./img/care-nature.jpg" alt="бумажный белый стаканчик кофе на деревянной качели"
+                        class="about__img" loading="lazy">
                 </div>
 
-                <div class="about__text-box">
+                <div class="about__text-wrapper">
                     <h2 class="about__subtitle h2">Забота о природе</h2>
 
                     <p class="about__text text">Мы стараемся уменьшить экологический след, используя биоразлагаемые
-                        стаканчики и
-                        предлагая скидки для тех, кто приходит со своей чашкой.</p>
+                        стаканчики и предлагая скидки для тех, кто приходит со своей чашкой.</p>
                     <p class="about__text text">Мы заботимся не только о клиентах, но и о планете.</p>
                 </div>
             </div>
@@ -139,262 +138,284 @@
     </section>
 
     <section class="menu center" id="menu">
-        <header class="menu-header title">
+        <header class="menu__header title">
             <h1 class="h1">Меню</h1>
 
-            <fieldset class="menu-category">
-                <input type="radio" id="category-coffee" name="category" class="menu__togglebutton" checked>
+            <fieldset class="menu__fieldset">
+                <input type="radio" id="category-coffee" name="category" class="menu__toggle-button" checked>
                 <label for="category-coffee" class="menu__button button">Кофе</label>
-                <input type="radio" id="category-dessert" name="category" class="menu__togglebutton">
+
+                <input type="radio" id="category-dessert" name="category" class="menu__toggle-button">
                 <label for="category-dessert" class="menu__button button">Десерты</label>
-                <input type="radio" id="category-snacks" name="category" class="menu__togglebutton">
+
+                <input type="radio" id="category-snacks" name="category" class="menu__toggle-button">
                 <label for="category-snacks" class="menu__button button">Закуски</label>
             </fieldset>
         </header>
 
-        <div class="product-box" id="coffee">
-            <div class="product">
-                <img src="./img/product-1-1.png" alt="чашка кофе" class="product__img">
+        <div class="product-box product-box_visible" id="coffee">
+            <article class="product">
+                <img src="./img/product-1-1.png" alt="капучино в белой кружке на белом блюдце" class="product__img"
+                    loading="lazy">
 
                 <div class="product-info">
                     <h2 class="product__price h2">240</h2>
                     <p class="product__description">Капучино на миндальном молоке с кокосовым сиропом</p>
                     <p class="product__weight product__weight_ml">350</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product">
-                <img src="./img/product-1-2.png" alt="чашка кофе" class="product__img">
+            <article class="product">
+                <img src="./img/product-1-2.png" alt="латте в белой кружке на белом блюдце" class="product__img"
+                    loading="lazy">
 
                 <div class="product-info">
                     <h2 class="product__price h2">270</h2>
                     <p class="product__description">Латте на кокосовом молоке с кленовым сиропом</p>
                     <p class="product__weight product__weight_ml">350</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product">
-                <img src="./img/product-1-3.png" alt="чашка кофе" class="product__img">
+            <article class="product">
+                <img src="./img/product-1-3.png" alt="раф в белой кружке на белом блюдце" class="product__img"
+                    loading="lazy">
 
                 <div class="product-info">
                     <h2 class="product__price h2">360</h2>
                     <p class="product__description">Раф с карамельным сиропоми шоколадом</p>
                     <p class="product__weight product__weight_ml">250</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product">
-                <img src="./img/product-1-4.png" alt="чашка кофе" class="product__img">
+            <article class="product">
+                <img src="./img/product-1-4.png" alt="черный кофе в белой кружке на белом блюдце" class="product__img"
+                    loading="lazy">
 
                 <div class="product-info">
                     <h2 class="product__price h2">160</h2>
                     <p class="product__description">Классический американо с зарядом бодрости</p>
                     <p class="product__weight product__weight_ml">300</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product">
-                <img src="./img/product-1-5.png" alt="чашка кофе" class="product__img">
+            <article class="product">
+                <img src="./img/product-1-5.png" alt="флет уайт в большой белой кружке на белом блюдце"
+                    class="product__img" loading="lazy">
 
                 <div class="product-info">
                     <h2 class="product__price h2">160</h2>
                     <p class="product__description">Флет уайт с насыщенным вкусом эфиопского эспрессо</p>
                     <p class="product__weight product__weight_ml">300</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product">
-                <img src="./img/product-1-6.png" alt="чашка кофе" class="product__img">
+            <article class="product">
+                <img src="./img/product-1-6.png" alt="латте в белой кружке на белом блюдце" class="product__img"
+                    loading="lazy">
 
                 <div class="product-info">
                     <h2 class="product__price h2">270</h2>
                     <p class="product__description">Латте на овсяном молоке с добавлением корицы</p>
                     <p class="product__weight product__weight_ml">300</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product">
-                <img src="./img/product-1-7.png" alt="чашка кофе" class="product__img">
+            <article class="product">
+                <img src="./img/product-1-7.png" alt="черный кофе с кофейной пенкой в белой кружке на белом блюдце"
+                    class="product__img" loading="lazy">
 
                 <div class="product-info">
                     <h2 class="product__price h2">180</h2>
                     <p class="product__description">Двойной эспрессо с высоким зарядом энергии</p>
                     <p class="product__weight product__weight_ml">300</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product">
-                <img src="./img/product-1-8.png" alt="чашка кофе" class="product__img">
+            <article class="product">
+                <img src="./img/product-1-8.png" alt="капучино в белой кружке на белом блюдце" class="product__img"
+                    loading="lazy">
 
                 <div class="product-info">
                     <h2 class="product__price h2">240</h2>
                     <p class="product__description">Капучино на соевом молоке с ореховым сиропом</p>
                     <p class="product__weight product__weight_ml">300</p>
                 </div>
-            </div>
+            </article>
         </div>
 
         <div class="product-box product-box_hidden" id="dessert">
-            <div class="product">
-                <img src="./img/product-2-1.png" alt="" class="product__img">
+            <article class="product">
+                <img src="./img/product-2-1.png" alt="синабон, вид сверху" class="product__img" loading="lazy">
 
                 <div class="product-info">
                     <h2 class="product__price h2">240</h2>
                     <p class="product__description">Синабон с ароматной корицей и глазурью</p>
                     <p class="product__weight product__weight_gr">250</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product">
-                <img src="./img/product-2-2.png" alt="" class="product__img">
+            <article class="product">
+                <img src="./img/product-2-2.png" alt="слойка с желтым кремом, вид сверху" class="product__img"
+                    loading="lazy">
 
                 <div class="product-info">
                     <h2 class="product__price h2">270</h2>
                     <p class="product__description">Воздушная датская слойка с нежным кремом</p>
                     <p class="product__weight product__weight_gr">250</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product">
-                <img src="./img/product-2-3.png" alt="" class="product__img">
+            <article class="product">
+                <img src="./img/product-2-3.png"
+                    alt="крем-брюле в белой форме украшен голубикой и листиком мяты, вид сверху" class="product__img"
+                    loading="lazy">
 
                 <div class="product-info">
                     <h2 class="product__price h2">360</h2>
                     <p class="product__description">Нежный крем-брюле с ягодами и карамельной корочкой </p>
                     <p class="product__weight product__weight_gr">150</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product">
-                <img src="./img/product-2-4.png" alt="" class="product__img">
+            <article class="product">
+                <img src="./img/product-2-4.png" alt="слойка улитка, вид сверху" class="product__img" loading="lazy">
 
                 <div class="product-info">
                     <h2 class="product__price h2">270</h2>
                     <p class="product__description">Улитка с яблочно-лимонным джемом и изюмом</p>
                     <p class="product__weight product__weight_gr">250</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product">
-                <img src="./img/product-2-5.png" alt="" class="product__img">
+            <article class="product">
+                <img src="./img/product-2-5.png" alt="треугольный кусок шоколадного торта" class="product__img"
+                    loading="lazy">
 
                 <div class="product-info">
                     <h2 class="product__price h2">160</h2>
                     <p class="product__description">Шоколадно-кофейный торт с глубоким вкусом какао</p>
                     <p class="product__weight product__weight_gr">170</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product">
-                <img src="./img/product-2-6.png" alt="" class="product__img">
+            <article class="product">
+                <img src="./img/product-2-6.png" alt="шоколадная тарталетка с малиной" class="product__img"
+                    loading="lazy">
 
                 <div class="product-info">
                     <h2 class="product__price h2">180</h2>
                     <p class="product__description">Шоколадная тарталетка с кремом и малиной</p>
                     <p class="product__weight product__weight_gr">150</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product">
-                <img src="./img/product-2-7.png" alt="" class="product__img">
+            <article class="product">
+                <img src="./img/product-2-7.png" alt="треугольный кусок торта медовик" class="product__img"
+                    loading="lazy">
 
                 <div class="product-info">
                     <h2 class="product__price h2">240</h2>
                     <p class="product__description">Классический медовик со сливочным кремом</p>
                     <p class="product__weight product__weight_gr">250</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product">
-                <img src="./img/product-2-8.png" alt="" class="product__img">
+            <article class="product">
+                <img src="./img/product-2-8.png"
+                    alt="треугольный кусок шоколадного торта, украшен сверху шоколадной стружкой" class="product__img"
+                    loading="lazy">
 
                 <div class="product-info">
                     <h2 class="product__price h2">160</h2>
                     <p class="product__description">Торт с нежным кремом, корицей и шоколадом</p>
                     <p class="product__weight product__weight_gr">300</p>
                 </div>
-            </div>
+            </article>
         </div>
 
         <div class="product-box product-box_hidden" id="snacks">
-            <div class="product">
-                <img src="./img/product-3-1.png" alt="" class="product__img">
+            <article class="product">
+                <img src="./img/product-3-1.png" alt="горсть миндаля" class="product__img" loading="lazy">
 
                 <div class="product-info">
                     <h2 class="product__price h2">240</h2>
                     <p class="product__description">Миндаль — идеальная закуска для перекуса</p>
                     <p class="product__weight product__weight_gr">200</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product">
-                <img src="./img/product-3-2.png" alt="" class="product__img">
+            <article class="product">
+                <img src="./img/product-3-2.png" alt="печенье с кусочками шоколада, 3 штуки" class="product__img"
+                    loading="lazy">
 
                 <div class="product-info">
                     <h2 class="product__price h2">360</h2>
                     <p class="product__description">Классическое печенье с кусочками шоколада</p>
                     <p class="product__weight product__weight_gr">250</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product">
-                <img src="./img/product-3-3.png" alt="" class="product__img">
+            <article class="product">
+                <img src="./img/product-3-3.png" alt="горсть светлых баранок с солью" class="product__img"
+                    loading="lazy">
 
                 <div class="product-info">
                     <h2 class="product__price h2">270</h2>
                     <p class="product__description">Баранки с легкой солью — отличное дополнение к кофе</p>
                     <p class="product__weight product__weight_gr">350</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product">
-                <img src="./img/product-3-4.png" alt="" class="product__img">
+            <article class="product">
+                <img src="./img/product-3-4.png" alt="булочка с маком" class="product__img" loading="lazy">
 
                 <div class="product-info">
                     <h2 class="product__price h2">160</h2>
                     <p class="product__description">Булочка с маком, покрытая нежной сахарной глазурью</p>
                     <p class="product__weight product__weight_gr">150</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product">
-                <img src="./img/product-3-5.png" alt="" class="product__img">
+            <article class="product">
+                <img src="./img/product-3-5.png" alt="горсть кешью" class="product__img" loading="lazy">
 
                 <div class="product-info">
                     <h2 class="product__price h2">270</h2>
                     <p class="product__description">Свежий, хрустящий кешью — полезный перекус</p>
                     <p class="product__weight product__weight_gr">300</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product">
-                <img src="./img/product-3-6.png" alt="" class="product__img">
+            <article class="product">
+                <img src="./img/product-3-6.png" alt="печенье с начинкой из шоколада, вид сверху" class="product__img"
+                    loading="lazy">
 
                 <div class="product-info">
                     <h2 class="product__price h2">160</h2>
                     <p class="product__description">Мягкое печенье с начинкой из шоколада </p>
                     <p class="product__weight product__weight_gr">150</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product">
-                <img src="./img/product-3-7.png" alt="" class="product__img">
+            <article class="product">
+                <img src="./img/product-3-7.png" alt="стопка панкейков, политая медом с кусочком масла наверху"
+                    class="product__img" loading="lazy">
 
                 <div class="product-info">
                     <h2 class="product__price h2">180</h2>
                     <p class="product__description">Нежные панкейки с сладким медом и маслом</p>
                     <p class="product__weight product__weight_gr">300</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="product">
-                <img src="./img/product-3-8.png" alt="" class="product__img">
+            <article class="product">
+                <img src="./img/product-3-8.png" alt="булочка-треугольник, 3 штуки" class="product__img" loading="lazy">
                 <div class="product-info">
                     <h2 class="product__price h2">240</h2>
                     <p class="product__description">Сытные треугольники с сырной начинкой</p>
                     <p class="product__weight product__weight_gr">250</p>
                 </div>
-            </div>
+            </article>
         </div>
     </section>
 
@@ -403,9 +424,11 @@
 
         <div class="reviews-content">
             <div class="review">
-                <header class="review-info">
-                    <img src="./img/client-1.png" alt="фото посетителя" class="review__img">
+                <header class="review__header">
+                    <img src="./img/client-1.png" alt="фото посетителя" class="review__img" loading="lazy">
+
                     <h2 class="h2">Ирина</h2>
+
                     <div class="rating">
                         <img src="./img/star.png" alt="звездочка рейтинга" class="review__rate-point">
                         <img src="./img/star.png" alt="звездочка рейтинга" class="review__rate-point">
@@ -421,9 +444,11 @@
             </div>
 
             <div class="review">
-                <header class="review-info">
-                    <img src="./img/client-2.png" alt="фото посетителя" class="review__img">
+                <header class="review__header">
+                    <img src="./img/client-2.png" alt="фото посетителя" class="review__img" loading="lazy">
+
                     <h2 class="h2">Игорь</h2>
+
                     <div class="rating">
                         <img src="./img/star.png" alt="звездочка рейтинга" class="review__rate-point">
                         <img src="./img/star.png" alt="звездочка рейтинга" class="review__rate-point">
@@ -434,15 +459,17 @@
                 </header>
 
                 <p class="review__text text">Я настоящий кофеман, и «Зернышко» удивило меня качеством! Здесь всегда
-                    свежие
-                    зерна и интересные рецепты — каждый раз нахожу новый вкус для себя. Рекомендую всем своим друзьям.
+                    свежие зерна и интересные рецепты — каждый раз нахожу новый вкус для себя.
+                    Рекомендую всем своим друзьям.
                 </p>
             </div>
 
             <div class="review">
-                <header class="review-info">
-                    <img src="./img/client-3.png" alt="фото посетителя" class="review__img">
+                <header class="review__header">
+                    <img src="./img/client-3.png" alt="фото посетителя" class="review__img" loading="lazy">
+
                     <h2 class="h2">Александр</h2>
+
                     <div class="rating">
                         <img src="./img/star.png" alt="звездочка рейтинга" class="review__rate-point">
                         <img src="./img/star.png" alt="звездочка рейтинга" class="review__rate-point">
@@ -458,9 +485,11 @@
             </div>
 
             <div class="review">
-                <header class="review-info">
-                    <img src="./img/client-4.png" alt="фото посетителя" class="review__img">
+                <header class="review__header">
+                    <img src="./img/client-4.png" alt="фото посетителя" class="review__img" loading="lazy">
+
                     <h2 class="h2">Эльза</h2>
+
                     <div class="rating">
                         <img src="./img/star.png" alt="звездочка рейтинга" class="review__rate-point">
                         <img src="./img/star.png" alt="звездочка рейтинга" class="review__rate-point">
@@ -471,15 +500,16 @@
                 </header>
 
                 <p class="review__text text">В «Зернышке» особенная атмосфера: уютно, стильно и спокойно. Идеальное
-                    место,
-                    чтобы сбежать от городской суеты, почитать книгу или просто расслабиться за чашкой кофе.
+                    место, чтобы сбежать от городской суеты, почитать книгу или просто расслабиться за чашкой кофе.
                 </p>
             </div>
 
             <div class="review">
-                <header class="review-info">
-                    <img src="./img/client-5.png" alt="фото посетителя" class="review__img">
+                <header class="review__header">
+                    <img src="./img/client-5.png" alt="фото посетителя" class="review__img" loading="lazy">
+
                     <h2 class="h2">Андрей</h2>
+
                     <div class="rating">
                         <img src="./img/star.png" alt="звездочка рейтинга" class="review__rate-point">
                         <img src="./img/star.png" alt="звездочка рейтинга" class="review__rate-point">
@@ -490,15 +520,17 @@
                 </header>
 
                 <p class="review__text text">Бариста всегда приветливые и открытые к общению. Люблю, когда заходишь, и
-                    тебя
-                    встречают с улыбкой и вниманием к деталям. Кажется, что здесь всех знают по имени и каждому рады.
+                    тебя встречают с улыбкой и вниманием к деталям.
+                    Кажется, что здесь всех знают по имени и каждому рады.
                 </p>
             </div>
 
             <div class="review">
-                <header class="review-info">
-                    <img src="./img/client-6.png" alt="фото посетителя" class="review__img">
+                <header class="review__header">
+                    <img src="./img/client-6.png" alt="фото посетителя" class="review__img" loading="lazy">
+
                     <h2 class="h2">Кристина</h2>
+
                     <div class="rating">
                         <img src="./img/star.png" alt="звездочка рейтинга" class="review__rate-point">
                         <img src="./img/star.png" alt="звездочка рейтинга" class="review__rate-point">
@@ -509,8 +541,8 @@
                 </header>
 
                 <p class="review__text text">Каждая чашка кофе в «Зернышке» словно маленький шедевр. Ощущается внимание
-                    к
-                    мелочам — от аромата до оформления напитка. Это то место, куда хочется возвращаться снова и снова.
+                    к мелочам — от аромата до оформления напитка.
+                    Это то место, куда хочется возвращаться снова и снова.
                 </p>
             </div>
         </div>
@@ -519,12 +551,12 @@
     <section class="find-us center" id="find-us">
         <h1 class="title h1">Как нас найти</h1>
 
-        <div class="contacts-box">
+        <div class="find-us-content">
             <div class="contacts-info">
                 <div class="contacts">
                     <h2 class="contacts__title h2">Контакты</h2>
 
-                    <div class="contacts-item">
+                    <div class="contacts-link-wrapper">
                         <svg class="contacts__img" width="20" height="20" viewBox="0 0 20 20" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -538,7 +570,7 @@
                         <a href="tel:+7(999)9999999" class="contacts__link text">+7 (999) 999 99-99</a>
                     </div>
 
-                    <div class="contacts-item">
+                    <div class="contacts-link-wrapper">
                         <svg class="contacts__img" width="20" height="20" viewBox="0 0 20 20" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -549,7 +581,7 @@
                         <a href="mailto:zernyshko@mail.ru" class="contacts__link text">zernyshko@mail.ru</a>
                     </div>
 
-                    <div class="contacts-item">
+                    <div class="contacts-link-wrapper">
                         <svg class="contacts__img" width="20" height="20" viewBox="0 0 20 20" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -564,12 +596,14 @@
                 <form action="#" method="get" class="booking">
                     <h2 class="booking__title h2">Бронирование</h2>
 
-                    <div class="booking-info">
+                    <div class="booking-content">
                         <input class="booking__input text" type="text" name="booking" id="client-name"
                             placeholder="Ваше имя">
+
                         <input class="booking__input text" type="tel" name="booking" id="client-tel"
                             placeholder="Ваш номер телефона"
                             pattern="^(8|\+7)(\s|\(|-)?(\d{3})(\s|\)|-)?(\d{3})(\s|-)?(\d{2})(\s|-)?(\d{2})$" required>
+
                         <input class="booking__input text" type="text" name="booking" id="client-text"
                             placeholder="Комментарий">
                     </div>
@@ -578,28 +612,28 @@
                 </form>
             </div>
 
-            <!-- <div > -->
-            <div class="find-us__map">
-                <a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps"
-                    style="color:#eee;font-size:12px;position:absolute;top:0;">Санкт‑Петербург</a>
+            <div class="map">
+                <a class="map__link"
+                    href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps">
+                    Санкт‑Петербург
+                </a>
 
-                <a href="https://yandex.ru/maps/2/saint-petersburg/house/pionerskaya_ulitsa_27a/Z0kYdA9pTEMCQFtjfXV0eX5iYQ==/?ll=30.348969%2C59.955890&utm_medium=mapframe&utm_source=maps&z=12"
-                    style="color:#eee;font-size:12px;position:absolute;top:14px;">Пионерская улица, 27А на карте
-                    Санкт‑Петербурга, ближайшее метро Чкаловская — Яндекс Карты</a>
+                <a class="map__link map__link_block"
+                    href="https://yandex.ru/maps/2/saint-petersburg/house/pionerskaya_ulitsa_27a/Z0kYdA9pTEMCQFtjfXV0eX5iYQ==/?ll=30.348969%2C59.955890&utm_medium=mapframe&utm_source=maps&z=12">
+                    Пионерская улица, 27А на карте Санкт‑Петербурга, ближайшее метро Чкаловская — Яндекс Карты</a>
 
-                <iframe
-                    style="position:relative; flex-grow: 1; flex-basis: 379px; width: 100%; height: 100%; border: none;"
-                    src="https://yandex.ru/map-widget/v1/?ll=30.348969%2C59.955890&mode=whatshere&utm_source=share&whatshere%5Bpoint%5D=30.289565%2C59.958215&whatshere%5Bzoom%5D=17&z=12">
+                <iframe class="map__frame"
+                    src="https://yandex.ru/map-widget/v1/?ll=30.348969%2C59.955890&mode=whatshere&utm_source=share&whatshere%5Bpoint%5D=30.289565%2C59.958215&whatshere%5Bzoom%5D=17&z=12"
+                    loading="lazy">
                 </iframe>
             </div>
-            <!-- </div> -->
         </div>
     </section>
 
     <footer class="footer">
         <div class="footer-content center">
-            <div class="footer-info">
-                <a class="footer__logo" href="#"><img src="./img/logo.svg" alt="логотип кофейни"></a>
+            <div class="footer__info">
+                <a class="footer__logo" href="#"><img src="./img/logo.svg" alt="логотип кофейни" loading="lazy"></a>
 
                 <p class="footer__rights text">© 2025 Все права защищены</p>
             </div>
