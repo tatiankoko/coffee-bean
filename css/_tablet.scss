@@ -43,11 +43,11 @@
         padding: 10px 0;
         flex-wrap: nowrap;
         align-items: stretch;
-        align-content: stretch;
         justify-content: flex-start;
         gap: 1rem;
         max-width: 100%;
-        margin: -10px auto 0 auto;
+        height: 100%;
+        margin: 0 auto; //-10px auto 0 auto;
         overflow-y: visible;
         overflow-x: auto;
         overscroll-behavior-x: none;
@@ -124,9 +124,13 @@
 
     .top {
         background-image: url('../img/top-coffee.png');
-        background-size: 70%;
+        background-size: 60%;
         //background-position: top -200px right -20px;
-        background-position: top right -50%; //-130px;
+        background-position: top -5% right -30%; //-130px;
+
+        &__title {
+            width: 80%;
+        }
     }
 
     .top-content {
